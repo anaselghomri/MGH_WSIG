@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Enable class-based dark mode in Tailwind CSS v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Pixie Custom Purple + Blue Palette */
+@theme {
+  /* Light Purple Surfaces */
+  --color-pixie-light-bg: #f6f2ff;
+  --color-pixie-light-panel: #efe9ff;
+  --color-pixie-light-card: #ffffff;
+  --color-pixie-light-border: #d8c8ff;
+
+  /* Dark Purple Surfaces */
+  --color-pixie-dark-bg: #110921;
+  --color-pixie-dark-panel: #1a0f33;
+  --color-pixie-dark-card: #241645;
+  --color-pixie-dark-border: #3a246b;
+
+  /* Blue & Violet Accents */
+  --color-pixie-blue: #3b82f6;
+  --color-pixie-blue-glow: #60a5fa;
+  --color-pixie-violet: #8b5cf6;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Light Purple Leaflet Controls */
+.leaflet-control-zoom a {
+  background-color: #efe9ff !important;
+  color: #2e1065 !important;
+  border-color: #d8c8ff !important;
+}
+.leaflet-control-zoom a:hover {
+  background-color: #ddd0ff !important;
+}
+.leaflet-control-attribution {
+  background: rgba(239, 233, 255, 0.85) !important;
+  color: #4c1d95 !important;
+}
+.leaflet-control-attribution a {
+  color: #2563eb !important;
+}
+
+/* Dark Purple Leaflet Controls */
+.dark .leaflet-control-zoom a {
+  background-color: #1a0f33 !important;
+  color: #f3e8ff !important;
+  border-color: #3a246b !important;
+}
+.dark .leaflet-control-zoom a:hover {
+  background-color: #2c1b54 !important;
+}
+.dark .leaflet-control-attribution {
+  background: rgba(17, 9, 33, 0.85) !important;
+  color: #c4b5fd !important;
+}
+.dark .leaflet-control-attribution a {
+  color: #60a5fa !important;
+}
